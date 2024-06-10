@@ -3,7 +3,7 @@ package calculator;
 import common.exception.NotCorrectInputException;
 import java.util.Arrays;
 
-public enum Command {
+enum Command {
   PLUS("+"), MINUS("-"), MULTI("*"), DEVIDE("/"), EXIT("EXIT");
   public final String value;
 
