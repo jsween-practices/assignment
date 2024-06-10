@@ -1,17 +1,21 @@
-public class CalculatorController {
+package calculator;
+
+import support.InputManager;
+
+class CalculatorController {
 
   private final InputManager inputManager;
-  private final OutputManager outputManager;
+  private final CalculatorOutputManager outputManager;
   private final CalculatorService service;
 
-  public CalculatorController(InputManager inputManager, OutputManager outputManager,
+  CalculatorController(InputManager inputManager, CalculatorOutputManager outputManager,
       CalculatorService service) {
     this.inputManager = inputManager;
     this.outputManager = outputManager;
     this.service = service;
   }
 
-  public Command selectActivity() {
+  Command selectActivity() {
     outputManager.printSelectActivity();
     try {
       return Command.valueOf(inputManager.inputInteger());
@@ -21,7 +25,7 @@ public class CalculatorController {
     }
   }
 
-  public int inputFirstNumber() {
+  int inputFirstNumber() {
     outputManager.printInputFirstNumber();
     try {
       return inputManager.inputInteger();
@@ -31,7 +35,7 @@ public class CalculatorController {
     }
   }
 
-  public int inputSecondNumber() {
+  int inputSecondNumber() {
     outputManager.printInputSecondNumber();
     try {
       return inputManager.inputInteger();
@@ -41,7 +45,7 @@ public class CalculatorController {
     }
   }
 
-  public void printResult(int firstNumber, int secondNumber, Command command) {
+  void printResult(int firstNumber, int secondNumber, Command command) {
     int result = service.calculate(firstNumber, secondNumber, command);
     outputManager.printExpression(firstNumber, secondNumber, command, result);
   }

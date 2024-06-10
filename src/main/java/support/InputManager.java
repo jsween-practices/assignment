@@ -1,3 +1,6 @@
+package support;
+
+import common.exception.NotCorrectInputException;
 import java.io.Closeable;
 import java.util.Scanner;
 
@@ -8,7 +11,7 @@ public class InputManager implements Closeable {
     this.scanner = scanner;
   }
 
-  int inputInteger() {
+  public int inputInteger() {
     try {
       return Integer.parseInt(scanner.nextLine());
     } catch (NumberFormatException e) {

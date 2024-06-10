@@ -1,16 +1,18 @@
-public class CalculatorService {
-  public int calculate(int firstNumber, int secondNumber, Command command) {
+package calculator;
+
+class CalculatorService {
+  int calculate(int firstNumber, int secondNumber, Command command) {
     switch (command) {
-      case PLUS -> {
+      case Command.PLUS -> {
         return firstNumber + secondNumber;
       }
-      case MINUS -> {
+      case Command.MINUS -> {
         return firstNumber - secondNumber;
       }
-      case MULTI -> {
+      case Command.MULTI -> {
         return firstNumber * secondNumber;
       }
-      case DEVIDE -> {
+      case Command.DEVIDE -> {
         return firstNumber / secondNumber;
       }
       default -> throw new RuntimeException("발생하지 않는 케이스입니다.");

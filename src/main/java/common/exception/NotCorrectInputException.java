@@ -1,3 +1,5 @@
+package common.exception;
+
 public class NotCorrectInputException extends IllegalArgumentException {
 
   public NotCorrectInputException() {

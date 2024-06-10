@@ -1,4 +1,6 @@
-public class CalculatorView {
+package calculator;
+
+class CalculatorView {
 
   private final CalculatorController controller;
 
@@ -6,7 +8,7 @@ public class CalculatorView {
     this.controller = controller;
   }
 
-  public void calculate() {
+  void calculate() {
     while (true) {
       Command command = controller.selectActivity();
       if (command == Command.EXIT) {
