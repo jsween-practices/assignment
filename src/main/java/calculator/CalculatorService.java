@@ -1,6 +1,6 @@
 package calculator;
 
-class CalculatorService {
+final class CalculatorService {
   int calculate(int firstNumber, int secondNumber, Command command) {
     switch (command) {
       case Command.PLUS -> {

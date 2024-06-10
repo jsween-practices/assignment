@@ -2,7 +2,7 @@ package calculator;
 
 import support.InputManager;
 
-class CalculatorController {
+final class CalculatorController {
 
   private final InputManager inputManager;
   private final CalculatorOutputManager outputManager;

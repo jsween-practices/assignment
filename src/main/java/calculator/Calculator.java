@@ -2,7 +2,7 @@ package calculator;
 
 import support.InputManager;
 
-public class Calculator {
+final public class Calculator {
   private final CalculatorView view;
   public Calculator(InputManager inputManager) {
     CalculatorController controller = new CalculatorController(inputManager,

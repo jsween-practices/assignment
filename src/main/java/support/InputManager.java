@@ -4,7 +4,7 @@ import common.exception.NotCorrectInputException;
 import java.io.Closeable;
 import java.util.Scanner;
 
-public class InputManager implements Closeable {
+final public class InputManager implements Closeable {
   private final Scanner scanner;
 
   public InputManager(Scanner scanner) {

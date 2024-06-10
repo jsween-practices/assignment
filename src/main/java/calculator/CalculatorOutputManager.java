@@ -1,6 +1,6 @@
 package calculator;
 
-class CalculatorOutputManager {
+final class CalculatorOutputManager {
 
   private final static String SELECT_ACTIVITY = "원하는 기능을 선택하세요\n 1. 덧셈 /2. 뺄셈 /3. 곱셈 /4. 나눗셈 /0. 종료";
   private final static String INPUT_FIRST_NUMBER = "첫번째 값을 입력하고 엔터를 누르세요.";

@@ -1,6 +1,6 @@
 package calculator;
 
-class CalculatorView {
+final class CalculatorView {
 
   private final CalculatorController controller;
 
