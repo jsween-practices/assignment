@@ -4,8 +4,8 @@ import support.InputManager;
 
 final public class Calculator {
   private final CalculatorView view;
-  public Calculator(InputManager inputManager) {
-    CalculatorController controller = new CalculatorController(inputManager,
+  public Calculator(final InputManager inputManager) {
+    final CalculatorController controller = new CalculatorController(inputManager,
         new CalculatorOutputManager(), new CalculatorService());
     this.view = new CalculatorView(controller);
   }

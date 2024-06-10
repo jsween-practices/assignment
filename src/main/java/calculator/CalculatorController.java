@@ -8,8 +8,8 @@ final class CalculatorController {
   private final CalculatorOutputManager outputManager;
   private final CalculatorService service;
 
-  CalculatorController(InputManager inputManager, CalculatorOutputManager outputManager,
-      CalculatorService service) {
+  CalculatorController(final InputManager inputManager, final CalculatorOutputManager outputManager,
+      final CalculatorService service) {
     this.inputManager = inputManager;
     this.outputManager = outputManager;
     this.service = service;
@@ -45,8 +45,8 @@ final class CalculatorController {
     }
   }
 
-  void printResult(int firstNumber, int secondNumber, Command command) {
-    int result = service.calculate(firstNumber, secondNumber, command);
+  void printResult(final int firstNumber, final int secondNumber, final Command command) {
+    final int result = service.calculate(firstNumber, secondNumber, command);
     outputManager.printExpression(firstNumber, secondNumber, command, result);
   }
 }
